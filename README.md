@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZenTime - Pomodoro Timer
+
+A beautiful and efficient Pomodoro timer application built with Next.js, TypeScript, and Tailwind CSS. ZenTime helps you stay focused and productive using the Pomodoro Technique.
+
+## Why ZenTime?
+
+ZenTime is a simple yet sophisticated Pomodoro timer designed with focus in mind. Unlike other timer applications, ZenTime:
+
+- 🚫 No ads or distractions
+- 🎯 Clean, minimalist interface
+- 💪 Built for productivity
+- 🎨 Beautiful design
+- 🔒 Privacy-focused (all data stored locally)
+- 📱 Works offline (PWA)
+
+## Features
+
+- 🍅 Pomodoro Timer with customizable durations
+- 📝 Task Management with Pomodoro estimates
+- 🌓 Light/Dark mode support
+- 📊 Progress tracking
+- 🔔 Sound notifications
+- 📱 Responsive design
+- 💾 Persistent storage
+- 📲 Install as PWA
+- 🔄 Offline support
+- 📱 Mobile-friendly
+
+## Tech Stack
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Zustand (State Management)
+- Lucide Icons
+- PWA Support
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/pawan67/zentime.git
+cd zentime
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Timer**
 
-## Learn More
+   - Start a Pomodoro session (25 minutes by default)
+   - Take short breaks (5 minutes)
+   - Take long breaks (15 minutes) after 4 Pomodoros
 
-To learn more about Next.js, take a look at the following resources:
+2. **Tasks**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Add tasks with estimated Pomodoro counts
+   - Track progress on each task
+   - Mark tasks as complete
+   - Add notes to tasks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Settings**
 
-## Deploy on Vercel
+   - Customize Pomodoro duration
+   - Adjust break durations
+   - Set long break interval
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **PWA Features**
+   - Install on your device
+   - Works offline
+   - Push notifications
+   - App-like experience
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

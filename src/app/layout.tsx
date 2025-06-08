@@ -261,7 +261,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="px-4 py-3 max-w-md  mx-auto ">
+          <div className="px-4 py-3 max-w-xl  mx-auto ">
             <Header />
             {children}
           </div>

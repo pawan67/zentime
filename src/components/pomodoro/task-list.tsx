@@ -102,7 +102,7 @@ export const TaskList = () => {
 
       <div className="space-y-4">
         {tasks.map((task) => (
-          <Card className="p-2" key={task.id}>
+          <Card className="p-2 " key={task.id}>
             <CardContent className=" p-2">
               <div className="flex items-start justify-between">
                 <div className="flex items-start space-x-3 flex-1">
@@ -114,15 +114,19 @@ export const TaskList = () => {
                   <div className="space-y-1">
                     <h3
                       className={`font-medium ${
-                        task.isCompleted ? "line-through text-gray-500" : ""
+                        task.isCompleted
+                          ? "line-through text-muted-foreground"
+                          : ""
                       }`}
                     >
                       {task.title}
                     </h3>
                     {task.notes && (
-                      <p className="text-sm text-gray-500">{task.notes}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {task.notes}
+                      </p>
                     )}
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                       <span>
                         {task.completedPomodoros}/{task.estimatedPomodoros}{" "}
                         pomodoros

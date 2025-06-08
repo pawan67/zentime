@@ -6,9 +6,13 @@ import { LoaderPinwheel } from "lucide-react";
 const Logo = () => {
   return (
     <Link href="/" className=" flex items-center gap-2 ">
-      <Button size="icon" variant="secondary">
-        <LoaderPinwheel />
-      </Button>
+      <Image
+        src="/logo.png"
+        width={36}
+        height={36}
+        alt="Logo"
+        className="h-8 w-8"
+      />
     </Link>
   );
 };

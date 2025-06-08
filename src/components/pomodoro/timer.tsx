@@ -159,7 +159,7 @@ export const PomodoroTimer = () => {
         </Button>
       </div>
 
-      <div className="text-sm font-semibold text-gray-300">
+      <div className="text-sm font-semibold text-muted-foreground">
         Completed Pomodoros: {completedPomodoros} | Sessions: {sessions}
       </div>
     </div>

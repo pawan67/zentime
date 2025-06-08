@@ -1,90 +1,85 @@
-# ZenTime - Pomodoro Timer
+# ZenTime - Simple Pomodoro Timer
 
-A beautiful and efficient Pomodoro timer application built with Next.js, TypeScript, and Tailwind CSS. ZenTime helps you stay focused and productive using the Pomodoro Technique.
+A simple yet sophisticated Pomodoro timer with no ads and no distractions. Built for productivity and focus.
 
 ## Why ZenTime?
 
-ZenTime is a simple yet sophisticated Pomodoro timer designed with focus in mind. Unlike other timer applications, ZenTime:
-
 - 🚫 No ads or distractions
 - 🎯 Clean, minimalist interface
-- 💪 Built for productivity
+- ⚡ Built for productivity
 - 🎨 Beautiful design
-- 🔒 Privacy-focused (all data stored locally)
-- 📱 Works offline (PWA)
+- 🔒 Privacy-focused with local storage
+- 💾 Data portability with export/import
 
 ## Features
 
-- 🍅 Pomodoro Timer with customizable durations
-- 📝 Task Management with Pomodoro estimates
-- 🌓 Light/Dark mode support
-- 📊 Progress tracking
-- 🔔 Sound notifications
+- ⏱️ Customizable Pomodoro timer
+- 📝 Task management with Pomodoro tracking
+- 🎵 Sound notifications
+- 🌓 Light/Dark mode
 - 📱 Responsive design
 - 💾 Persistent storage
-- 📲 Install as PWA
-- 🔄 Offline support
-- 📱 Mobile-friendly
+- 📤 Export/Import functionality
+- 🔄 System theme detection
+- 🎯 Task statistics and progress tracking
 
 ## Tech Stack
 
-- Next.js 15
+- Next.js 14
 - TypeScript
 - Tailwind CSS
 - Shadcn UI
-- Zustand (State Management)
-- Lucide Icons
+- Zustand
 - PWA Support
 
 ## Getting Started
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/pawan67/zentime.git
-cd zentime
-```
+   ```bash
+   git clone https://github.com/yourusername/zentime.git
+   ```
 
 2. Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   cd zentime
+   npm install
+   ```
 
 3. Run the development server:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Usage
 
-1. **Timer**
+### Timer
 
-   - Start a Pomodoro session (25 minutes by default)
-   - Take short breaks (5 minutes)
-   - Take long breaks (15 minutes) after 4 Pomodoros
+- Click the timer to start/pause
+- Use the settings to customize work/break durations
+- Enable/disable sound notifications
+- Track completed Pomodoros
 
-2. **Tasks**
+### Tasks
 
-   - Add tasks with estimated Pomodoro counts
-   - Track progress on each task
-   - Mark tasks as complete
-   - Add notes to tasks
+- Add tasks with estimated Pomodoro counts
+- Mark tasks as complete
+- Track Pomodoros per task
+- Clear completed or all tasks from settings
 
-3. **Settings**
+### Settings
 
-   - Customize Pomodoro duration
-   - Adjust break durations
-   - Set long break interval
-
-4. **PWA Features**
-   - Install on your device
-   - Works offline
-   - Push notifications
-   - App-like experience
+- Toggle between light and dark mode
+- Enable/disable sound notifications
+- Customize timer durations
+- Export/Import your data:
+  - Export: Download a JSON file containing all your tasks, completed Pomodoros, and settings
+  - Import: Upload a previously exported JSON file to restore your data
+  - Use this feature to backup your data or transfer it to another device
 
 ## Contributing
 

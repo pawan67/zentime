@@ -3,14 +3,47 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/manifest.json",
-  "/icons/icon-72x72.png",
-  "/icons/icon-96x96.png",
-  "/icons/icon-128x128.png",
-  "/icons/icon-144x144.png",
-  "/icons/icon-152x152.png",
-  "/icons/icon-192x192.png",
-  "/icons/icon-384x384.png",
-  "/icons/icon-512x512.png",
+  "/icons/manifest-icon-192.maskable.png",
+  "/icons/manifest-icon-512.maskable.png",
+  "/icons/apple-icon-180.png",
+  "/icons/apple-splash-2048-2732.png",
+  "/icons/apple-splash-2732-2048.png",
+  "/icons/apple-splash-1668-2388.png",
+  "/icons/apple-splash-2388-1668.png",
+  "/icons/apple-splash-1536-2048.png",
+  "/icons/apple-splash-2048-1536.png",
+  "/icons/apple-splash-1640-2360.png",
+  "/icons/apple-splash-2360-1640.png",
+  "/icons/apple-splash-1668-2224.png",
+  "/icons/apple-splash-2224-1668.png",
+  "/icons/apple-splash-1620-2160.png",
+  "/icons/apple-splash-2160-1620.png",
+  "/icons/apple-splash-1488-2266.png",
+  "/icons/apple-splash-2266-1488.png",
+  "/icons/apple-splash-1320-2868.png",
+  "/icons/apple-splash-2868-1320.png",
+  "/icons/apple-splash-1206-2622.png",
+  "/icons/apple-splash-2622-1206.png",
+  "/icons/apple-splash-1290-2796.png",
+  "/icons/apple-splash-2796-1290.png",
+  "/icons/apple-splash-1179-2556.png",
+  "/icons/apple-splash-2556-1179.png",
+  "/icons/apple-splash-1170-2532.png",
+  "/icons/apple-splash-2532-1170.png",
+  "/icons/apple-splash-1284-2778.png",
+  "/icons/apple-splash-2778-1284.png",
+  "/icons/apple-splash-1125-2436.png",
+  "/icons/apple-splash-2436-1125.png",
+  "/icons/apple-splash-1242-2688.png",
+  "/icons/apple-splash-2688-1242.png",
+  "/icons/apple-splash-828-1792.png",
+  "/icons/apple-splash-1792-828.png",
+  "/icons/apple-splash-1242-2208.png",
+  "/icons/apple-splash-2208-1242.png",
+  "/icons/apple-splash-750-1334.png",
+  "/icons/apple-splash-1334-750.png",
+  "/icons/apple-splash-640-1136.png",
+  "/icons/apple-splash-1136-640.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -20,6 +53,11 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  // Skip caching for data import/export
+  if (event.request.url.includes("zentime-backup")) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {

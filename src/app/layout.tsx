@@ -254,16 +254,19 @@ export default function RootLayout({
           media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
         />
       </head>
-      <body className={geistMono.className}>
+      <body className={`${geistMono.className} `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark", "system"]}
         >
-          <div className="px-4 py-3 max-w-xl  mx-auto ">
-            <Header />
-            {children}
+          <div className="relative flex min-h-screen w-full flex-col items-center justify-start bg-bg dark:bg-secondaryBlack bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]">
+            <div className="px-4 py-3 max-w-xl w-full  mx-auto  ">
+              <Header />
+              {children}
+            </div>
           </div>
           <Toaster richColors />
         </ThemeProvider>

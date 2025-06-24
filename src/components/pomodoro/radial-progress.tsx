@@ -40,11 +40,6 @@ export function RadialProgress({
         <div className="relative w-[250px]  h-[250px] mx-auto">
           {/* Timer Display */}
 
-          <div
-            className={`inset-10 absolute rounded-full opacity-30   blur-3xl ${color} ${
-              isRunning && "animate-pulse"
-            } `}
-          ></div>
           <div className="absolute inset-0 flex   items-center justify-center">
             <div className="text-8xl font-bold">
               {timeLeft

@@ -1,40 +1,48 @@
 import { Brain, Clock, Coffee, Target, Zap, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { Icon } from "@iconify/react";
 const Info = () => {
   const benefits = [
     {
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Icon icon="noto:brain" width="30" height="30" />,
       title: "Enhanced Focus",
       description:
         "25-minute focused work sessions help maintain concentration and reduce mental fatigue.",
     },
     {
-      icon: <Clock className="w-6 h-6" />,
+      icon: (
+        <Icon icon="streamline-stickies-color:time" width="30" height="30" />
+      ),
       title: "Better Time Management",
       description:
         "Break down work into manageable intervals, making large tasks less overwhelming.",
     },
     {
-      icon: <Coffee className="w-6 h-6" />,
+      icon: (
+        <Icon
+          icon="streamline-kameleon-color:tea-cup-duo"
+          width="30"
+          height="30"
+        />
+      ),
       title: "Regular Breaks",
       description:
         "Short breaks between sessions help maintain energy and prevent burnout.",
     },
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: <Icon icon="mage:goals-fill" width="30" height="30" />,
       title: "Clear Goals",
       description:
         "Each pomodoro is a commitment to a specific task, improving goal clarity.",
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Icon icon="streamline-color:brain-flat" width="30" height="30" />,
       title: "Increased Productivity",
       description:
         "Regular breaks and focused work periods lead to higher quality output.",
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
+      icon: <Icon icon="noto:bar-chart" width="30" height="30" />,
       title: "Progress Tracking",
       description:
         "Track completed pomodoros to measure productivity and improve time estimates.",

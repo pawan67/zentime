@@ -18,9 +18,7 @@ const MainScreen = () => {
         <Tabs defaultValue="tasks" className="w-full">
           <TabsList className="w-full">
             <TabsTrigger value="tasks">Tasks</TabsTrigger>
-            <TabsTrigger value="info">
-              About Pomodoro
-            </TabsTrigger>
+            <TabsTrigger value="info">About Pomodoro</TabsTrigger>
           </TabsList>
 
           <TabsContent value="tasks">

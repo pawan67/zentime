@@ -168,7 +168,7 @@ export function DataManagement() {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className=" grid grid-cols-2 gap-4  ">
-          <Button variant="outline" className="flex-1" onClick={exportData}>
+          <Button className="flex-1" onClick={exportData}>
             <Download className="mr-2 h-4 w-4" />
             Export Data
           </Button>
@@ -181,7 +181,7 @@ export function DataManagement() {
               id="import-file"
             />
             <Button
-              variant="outline"
+              variant="neutral"
               className="w-full"
               onClick={() => document.getElementById("import-file")?.click()}
             >

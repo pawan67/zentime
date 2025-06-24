@@ -9,7 +9,7 @@ import {
   getModeLabel,
   getNextMode,
 } from "@/lib/utils/timer-utils";
-import { playNotificationSound } from "@/lib/utils/sound-utils";
+import { playAlarmSound, playButtonSound } from "@/lib/utils/sound-utils";
 import { RadialProgress } from "./radial-progress";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CirclePlay, Pause, Play, RefreshCcw } from "lucide-react";
@@ -125,7 +125,7 @@ export const PomodoroTimer = () => {
 
           if (newTimeLeft === 0) {
             setIsRunning(false);
-            playNotificationSound();
+            playAlarmSound();
             if (mode === "pomodoro") {
               incrementCompletedPomodoros();
               if (selectedTaskId) {
@@ -161,6 +161,7 @@ export const PomodoroTimer = () => {
   }, [isRunning, timeLeft, mode]);
 
   const handleStartPause = () => {
+    playButtonSound();
     setIsRunning(!isRunning);
   };
 
@@ -175,6 +176,18 @@ export const PomodoroTimer = () => {
   };
 
   const activeTasks = tasks.filter((task) => !task.isCompleted);
+
+  // Set mode class on <html> based on Pomodoro mode
+  useEffect(() => {
+    const html = document.documentElement;
+    html.classList.remove("pomodoro", "break", "long-break");
+    if (mode === "pomodoro") html.classList.add("pomodoro");
+    else if (mode === "shortBreak") html.classList.add("break");
+    else if (mode === "longBreak") html.classList.add("long-break");
+    return () => {
+      html.classList.remove("pomodoro", "break", "long-break");
+    };
+  }, [mode]);
 
   return (
     <div className="flex flex-col items-center space-y-5 ">
@@ -217,7 +230,7 @@ export const PomodoroTimer = () => {
         <Button
           onClick={handleReset}
           className=" p-4"
-          variant="outline"
+          variant="neutral"
           size="icon"
         >
           <RefreshCcw />
@@ -232,13 +245,7 @@ export const PomodoroTimer = () => {
       />
 
       <div className="flex space-x-4">
-        <Button
-          onClick={handleStartPause}
-          className={` ${
-            !isRunning ? "border-b-6  " : " bg-primary/90"
-          }   border-secondary box-content    `}
-          size="lg"
-        >
+        <Button onClick={handleStartPause} size="lg">
           {isRunning ? <Pause /> : <CirclePlay />}
           {isRunning ? "Pause" : "Start"}
         </Button>

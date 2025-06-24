@@ -14,7 +14,6 @@ const Header = () => {
         <Link
           className={buttonVariants({
             size: "icon",
-            variant: "secondary",
           })}
           href="/settings"
         >

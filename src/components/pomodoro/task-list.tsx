@@ -142,11 +142,7 @@ export const TaskList = () => {
                     open={editingTask?.id === task.id}
                   >
                     <DialogTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setEditingTask(task)}
-                      >
+                      <Button size="icon" onClick={() => setEditingTask(task)}>
                         <Edit2 className="w-4 h-4" />
                       </Button>
                     </DialogTrigger>
@@ -211,11 +207,7 @@ export const TaskList = () => {
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => deleteTask(task.id)}
-                  >
+                  <Button size="icon" onClick={() => deleteTask(task.id)}>
                     <Trash2 className="w-4 h-4" />
                   </Button>
                 </div>

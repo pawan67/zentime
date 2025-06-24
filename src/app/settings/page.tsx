@@ -1,3 +1,4 @@
+import AboutCard from "@/components/settings/about-card";
 import { DataManagement } from "@/components/settings/data-management";
 import { PomodoroSettings } from "@/components/settings/settings";
 import { TaskSettings } from "@/components/settings/task-settings";
@@ -15,8 +16,8 @@ export default function SettingsPage() {
       <div className="space-y-6">
         <PomodoroSettings />
         <TaskSettings />
-        
         <DataManagement />
+        <AboutCard />
       </div>
     </div>
   );

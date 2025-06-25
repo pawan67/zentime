@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/shared/header";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
+import { ModeClassManager } from "@/components/shared/mode-class-manager";
 const inter = Inter({ subsets: ["latin"] });
 const spaceMono = Space_Mono({
   weight: "400",
@@ -262,6 +263,7 @@ export default function RootLayout({
           disableTransitionOnChange
           themes={["light", "dark", "system"]}
         >
+          <ModeClassManager />
           <div className="relative flex min-h-screen w-full flex-col items-center justify-start bg-bg dark:bg-secondaryBlack bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]">
             <div className="px-4 py-3 max-w-xl w-full  mx-auto  ">
               <Header />

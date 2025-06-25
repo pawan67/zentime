@@ -177,18 +177,6 @@ export const PomodoroTimer = () => {
 
   const activeTasks = tasks.filter((task) => !task.isCompleted);
 
-  // Set mode class on <html> based on Pomodoro mode
-  useEffect(() => {
-    const html = document.documentElement;
-    html.classList.remove("pomodoro", "break", "long-break");
-    if (mode === "pomodoro") html.classList.add("pomodoro");
-    else if (mode === "shortBreak") html.classList.add("break");
-    else if (mode === "longBreak") html.classList.add("long-break");
-    return () => {
-      html.classList.remove("pomodoro", "break", "long-break");
-    };
-  }, [mode]);
-
   return (
     <div className="flex flex-col items-center space-y-5 ">
       <Tabs

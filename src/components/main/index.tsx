@@ -16,7 +16,7 @@ const MainScreen = () => {
       <PomodoroTimer />
       <div className="mt-5">
         <Tabs defaultValue="tasks" className="w-full">
-          <TabsList className="w-full">
+          <TabsList className="w-full grid grid-cols-2">
             <TabsTrigger value="tasks">Tasks</TabsTrigger>
             <TabsTrigger value="info">About Pomodoro</TabsTrigger>
           </TabsList>
